@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Mini Games</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script>
+        function playClickSound() {
+            var clickSound = document.getElementById("buttonClick");
+            clickSound.currentTime = 0; // start fra begynnelsen av lyden
+            clickSound.play(); // spill av lyd
+        }
+
+        // bytt side til index.html når Esc blir trykket på
+        document.addEventListener('keyup', function (event) {
+            if (event.key === 'Escape') {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="background background2"></div>
+    <audio id="buttonClick" src="sounds/buttonpressed.mp3"></audio>
+    <div class="button-container"></div>
+
+
+    <h1>
+        <img src="images/PlayGameMenu.png" class="PlayGameMenu" style="height: 784px; z-index: 5;">
+    </h1>
+
+    <div class="container">
+        <div class="grid-area">
+            <div class="scrollable-area">
+                <div class="text-overlay">
+                    <br>
+                    <p>Minigames</p>
+                    <br>
+                    <p>The Minecraft Minigames were a highlight of the Console Edition. This feature introduced three
+                        unique modes: Battle, Tumble, and Glide. Each mode came with beautifully crafted maps and
+                        immersive music. With these three distinct game modes, there was something for everyone. Plus,
+                        the option to play with up to 8 players online made Minigames one of the Console Edition’s best
+                        additions. </p>
+                    <br>
+                    <br>
+                    <p>______________<img src="images/Battle_Mini_Game_logo.png" style="height:90px ;">_______________
+                    </p>
+                    <br>
+                    <p>Battle Minigame</p>
+                    <br>
+                    <p>The Battle minigame was 4J Studios' exciting take on PvP for consoles, providing a fun and
+                        competitive experience for players. Each round features a choice of 21 different maps, each
+                        designed to offer unique challenges. Players start in a circle around a central area filled with
+                        chests containing weapons and food. As the countdown ends, everyone rushes to the middle to grab
+                        supplies, but they only have 10 seconds of immunity before the battle begins, making everyone
+                        rush to get away.
+                        <br>
+                        <img src="images/battleMap.png" style="height:275px ;">
+                        <br>
+                        In addition to the central chests, there are extra loot chests scattered around the arena. These
+                        often contain better items and are placed in hard-to-reach spots high up, adding an exciting
+                        element of risk. Once the battle starts, it’s classic PvP action—anything goes! Players can use
+                        TNT, poisoned arrows, and other strategies to take out their opponents.
+                        <br>
+                        <br>
+                        Players can team up with others to increase their chances of winning or choose to fight alone
+                        for a greater challenge. With its fast-paced gameplay and opportunities for clever tactics, the
+                        Battle minigame is perfect for aggressive players eager to dominate the arena.
+                    </p>
+                    <br>
+                    <br>
+                    <p>___________<img src="images/Tumble_Mini_Game_logo.png" style="height:110px ;">____________</p>
+                    <br>
+                    <p>Tumble Minigame</p>
+                    <br>
+                    <p>Tumble is Minecraft's take on Spleef, where the goal is to destroy the blocks, your opponents are
+                        standing on to make them fall into lava. This game has two primary modes: Snowball and Shovel.
+                        In Shovel mode, players stand on a single layer of blocks. If opponents break those blocks, you
+                        will fall directly into the lava—no exceptions. Using the shovel, you can instantly break any
+                        block beneath you.
+                        <br>
+                        <img src="images/TumbleMap.PNG" style="height:380px ;">
+                        <br>
+                        In Snowball mode, players have multiple layers of blocks to land on, with a spacing of 5 to 7
+                        blocks between each layer. Here, you throw snowballs at opponents, which deal knockback when
+                        they hit, but can also break blocks if aimed correctly. While you can still break blocks by
+                        hitting them, however shooting them is a lot more fun.
+                        <br>
+                        <br>
+                        Additionally, when adjusting the round settings, you can enable two extra options. The first is
+                        splash potions that grant levitation; when thrown, they allow you to float for a limited time.
+                        The second option is rockets that explode on impact. If timed perfectly, you can shoot a rocket
+                        beneath you and jump to achieve a super jump.
+                    </p>
+                    <br>
+                    <br>
+                    <p>____________<img src="images/Glide_Mini_Game_logo.png" style="height:100px ;">_____________</p>
+                    <br>
+                    <p>Glide Minigame</p>
+                    <br>
+                    <p>Glide is the final minigame added to Minecraft Legacy Edition, and it features an original game
+                        mode created specifically for consoles. In Glide, players start from a high vantage point with a
+                        panoramic view of the landscape below. The objective is to navigate between obstacles, such as
+                        trees and buildings, without touching the ground.
+                        You begin with three lives; if you hit the ground and come to a stop, you'll lose all your lives
+                        and respawn at the last checkpoint, which is marked by two beacons. If you collide with a wall
+                        at high speed without completely stopping, you'll only lose one life. The challenge lies in
+                        balancing speed and agility to maneuver through tight corners without crashing or losing too
+                        much altitude.
+                        <br>
+                        <img src="images/GlideMap.PNG" style="height:380px ;">
+                        <br>
+                        Scattered throughout the maps are speed boosts and updrafts. Speed boosts increase your
+                        velocity, while updrafts lift you higher into the air. There are two game modes in Glide:
+                        <br>
+                        <br>
+                        1. Time-Attack: This mode is straightforward—the first player to cross the finish line wins. If one
+                        player reaches the goal, the remaining players have only 30 seconds to finish; otherwise, they
+                        lose the round.
+                        <br>
+                        <br>
+                        2. Score-Attack: Players fly through three sizes of rings—green, yellow, and blue—scattered
+                        around the map. Green rings are the largest and easiest to navigate, offering 1 point, while
+                        blue rings are more challenging but yield 3 points. If two players finish with the same score,
+                        the one with the better time is declared the winner.
+                        <br>
+                        <br>
+                        The maps are filled with shortcuts that can provide a significant advantage, although some are
+                        nearly impossible to utilize effectively. This makes Glide an excellent choice for speedrunning.
+                        Fun fact: Glide is the only minigame you can play solo. In solo mode, you can see a ghost of
+                        your previous attempts each time you glide, allowing you to compete against your own best score.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

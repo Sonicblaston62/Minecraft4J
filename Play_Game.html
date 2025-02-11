@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Play Game</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"> 
+    <!-- Include polyfills for IE -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Element.prototype.classList,Element.prototype.closest,Element.prototype.matches,NodeList.prototype.forEach"></script>
+    <script>
+        function playClickSound() {
+            var clickSound = document.getElementById("buttonClick");
+            clickSound.currentTime = 0; // Start lyd fra begynnelsen
+            clickSound.play(); // Spill av lyd
+        }
+
+        // bytt side til index.html når Esc blir trykket på
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('keyup', function (event) {
+                if (event.key === 'Escape') {
+                    window.location.href = "index.html";
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="background background2"></div>
+    <audio id="buttonClick" src="sounds/buttonpressed.mp3"></audio>
+    <div class="button-container"></div>
+
+
+    <h1>
+        <img src="images/PlayGameMenu.png" class="PlayGameMenu" style="height: 784px; z-index: 5;">
+    </h1>
+
+    <div class="container">
+        <div class="grid-area">
+            <div class="scrollable-area">
+                <div class="text-overlay">
+                    <p><img src="images/minecraft_title.png" class="logo1" style="height: 90px;"></p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!--Dette er hva som skjer når du lar en person som kan alt for mye om temaet skrive alt sammen på ett sted.-->
+                    <p>The biggest Game in History websitey</p>
+                    <br>
+                    <p>Minecraft is the most popular video game of all time and has survived for over 15 years and
+                        counting. This game has continued to captivate players. Originally a PC game, Minecraft has
+                        been
+                        ported to numerous platforms, now available on nearly every device
+                        imaginable. From handheld consoles to stationary systems, countless machines have hosted
+                        this
+                        iconic game. But today, we’re focusing on one particular version. The version is now
+                        referred to
+                        as Minecraft Console Edition. </p>
+                    <br>
+                    <p><img src="images/Minecraft-Xbox-360_3.png" style="height:213px ;"></p>
+                    <br>
+                    <p>Minecraft on Consoles. A completely new Concept</p>
+                    <br>
+                    <p>People were unsure if this so-called "lite" version of Minecraft would be a success or a
+                        total
+                        flop. Initially, things didn’t look promising. The console version was based on an older
+                        build
+                        of the game and lacked key features, like infinite worlds and online multiplayer. If your
+                        world
+                        didn’t have a woodland mansion or ocean ruins, there was no way of getting cross-platform
+                        play
+                        or online multiplayer at the time. Yet, despite these limitations, no one could have
+                        predicted
+                        how much passion and love the console edition would get over the next few years.
+                        <br>
+                    <p><img src="images/MinecraftOld.png" style="height:300px ;"></p>
+                    <br>
+                    <p> Divide and Conquer</p>
+                    <br>
+                    <p>The creator of Minecraft, Notch originally stated that Minecraft was only being released on
+                        the
+                        Xbox 360. However, it soon became clear that this game was far too big to stay contained on
+                        one
+                        console. Later the game was ported to PS3, PSVita/PS TV, and WiiU. Nintendo Switch, Xbox
+                        One,
+                        and PS4 did get their versions too, however, these were discontinued and instead replaced
+                        with
+                        Bedrock Edition.</p>
+                    <br>
+                    <p><img src="images/ps3.360.wiiU.png" style="height:300px ;"></p>
+                    <br>
+                    <p>Quality or Quantity? Why not Both?</p>
+                    <br>
+                    <p>Developed and updated by 4J Studios, a third-party game development studio known for their
+                        expertise, this version introduced many features not found in any other Minecraft version.
+                        Key
+                        additions included tutorial worlds, Mini Games, and an extensive skin library. 4J Studios
+                        knew
+                        how to improve the game, and they eventually introduced online multiplayer, allowing up to 8
+                        players to cplay online. A major milestone for the console edition.</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+:root {
+    --white: white;
+}
+
+body {
+    font-family: 'MinecraftFont', sans-serif;
+    /* Bruk tilpasset skrifttype */
+    cursor: url('images/minecraftCursor.png') 24 24, default;
+    /* Tilpasset musepeker med sentrert treffboks */
+    overflow-x: hidden;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 340%;
+    height: 100%;
+    background-image: url('images/panoramaL4J.png');
+    background-size: cover;
+    animation: moveBackground 200s linear infinite;
+    /* Juster varighet for hastighet */
+}
+
+.background2 {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    /* Start den andre bakgrunnen rett etter den første */
+    width: 340%;
+    height: 100%;
+    background-image: url('images/panoramaL4J.png');
+    background-size: cover;
+    animation: moveBackground2 200s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveBackground2 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('font/Minecraft-Regular.eot'); /* IE6-IE8 */
+    src: url('font/Minecraft-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('font/Minecraft-Regular.woff2') format('woff2'),
+         url('font/Minecraft-Regular.woff') format('woff'),
+         url('font/Minecraft-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MinecraftFont', Arial, sans-serif;
+}
+
+
+h1 {
+    position: relative;
+    /* Sørg for at den kan plasseres */
+    z-index: 10;
+    /* Sett en høyere z-index for å vises over bakgrunnen */
+    color: rgb(0, 0, 0);
+    /* Endre tekstfarge for bedre synlighet */
+    text-align: center;
+    /* Sentrer teksten (valgfritt) */
+    font-size: 5em;
+    /* Juster skrifttype størrelsen etter behov */
+    margin-top: 20px;
+    /* Legg til litt margin for mellomrom */
+}
+
+/* Container for knappene */
+.button-container {
+    position: absolute;
+    top: 250px;
+    /* Juster Y-posisjon for å lage plass til logoene */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90;
+    /* Høyere enn logoene, men under splash-tekst */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Knappe Stil */
+.custom-button:first-of-type {
+    margin-top: 142px;
+}
+
+.custom-button {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    /* Justerer med nabo elementer */
+    width: 655px;
+    height: 65px;
+    background-image: url('images/minecraft-button.png');
+    background-size: cover;
+    text-align: center;
+    color: var(--white);
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+    text-shadow: 1.5px 1px 0px rgba(0, 0, 0, 2);
+    margin: 7px;
+    padding: 0;
+    /* Tilbakestill padding */
+    border: none;
+    /* Fjern standard knapp border */
+    image-rendering: pixelated;
+    color: white;
+    text-decoration: none; /* Add this line to remove the white line under the text */
+}
+.custom-button a {
+    text-decoration: none; /* Ensure anchor tags inside custom-button have no text decoration */
+}
+
+/* Hover Effekt */
+.custom-button:hover {
+    background-image: url('images/button_highlightedlegacy.png');
+    /* Hover knapp bilde */
+    color: #ffff00;
+    cursor: inherit;
+}
+
+.mc-button {
+    height: var(--btn-size);
+    width: calc(var(--btn-size) * 10);
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+.splash-text {
+    position: absolute;
+    top: -30px;
+    left: 600px;
+    font-family: 'MinecraftFont', sans-serif;
+    font-size: 2em;
+    /* Standard størrelse, men vil bli overskrevet av JavaScript */
+    color: yellow;
+    text-shadow: 4px 4px 0px rgba(48, 48, 0, 255);
+    /* Juster skygge for synlighet */
+    animation: pulse 0.5s infinite;
+    /* Bruk pulserende animasjon */
+    transform-origin: center;
+    z-index: 100;
+    /* Sørg for at den er over alt */
+    visibility: hidden;
+    /* Skjul splash-tekst i utgangspunktet */
+    max-width: 100%;
+    /* Sørg for at den ikke overskrider skjermbredden */
+    white-space: nowrap;
+    /* Sørg for at teksten holder seg på en linje */
+    z-index: 100;
+    /* Hold dette høyt for å vises over alt */
+}
+
+/* Definer den pulserende animasjonen */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) rotate(-17deg) scale(1);
+        /* Skaler fra original størrelse */
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-17deg) scale(1.1);
+        /* Skaler opp */
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-17deg) scale(1);
+        /* Gå tilbake til original størrelse */
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: var(--white);
+}
+
+a:hover {
+    color: inherit;
+}
+
+.container {
+    position: absolute;
+    /* La den overlappe */
+    top: 188px;
+    /* Plasser tekst under bildet */
+    left: 50%;
+    /* Sentrer den horisontalt */
+    transform: translateX(-50%);
+    /* Senterjustering */
+    display: grid;
+    width: 700px;
+    z-index: 10;
+    /* Høyere enn bildet */
+    border: none;
+}
+
+.grid-area {
+    z-index: 10;
+    /* Sørg for at den er over andre elementer */
+}
+
+.scrollable-area {
+    max-height: 590px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 11;
+    /* Høyere enn grid-området */
+}
+
+.text-overlay {
+    position: relative;
+    z-index: 12;
+    /* Sørg for at den er over det rullbare området */
+    color: white;
+    text-shadow: 1.5px 1px 0px rgba(0, 0, 0, 2);
+    font-size: 20px;
+}
+
+.PlayGameMenu {
+    position: absolute;
+    /* Fjern den fra normal dokumentflyt */
+    top: 68px;
+    /* Plasser den på toppen */
+    left: 50%;
+    /* Sentrer den horisontalt */
+    transform: translateX(-50%);
+    /* Senterjustering */
+    z-index: 5;
+    /* Sørg for at den er under gridet */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* Skjul rullefelt for Firefox */
+.scrollable-area {
+    scrollbar-width: none;
+    /* Firefox */
+    /* For Internet Explorer og Edge */
+    -ms-overflow-style: none;
+}
+
+.game-menu {
+    display: grid;
+    place-items: end start;
+    height: 100px;
+    padding: 20px;
+}
+
+.select-button {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: none;
+    align-items: center;
+    gap: 5px;
+    /* padding: 5px 10px; */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    position: relative;
+    left: 68px;
+    bottom: 123px;
+}
+
+.button-text {
+    color: white;
+    font-family: 'MinecraftFont', sans-serif;
+    /* Bruk din Minecraft-skrift */
+    font-size: 28px;
+    text-shadow: 1.5px 1px 0px rgba(0, 0, 0, 2);
+}
+
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Fullskjermhøyde */
+    z-index: 50;
+    /* Lavere enn splash-tekst og knapper */
+}
+
+.logo1,
+.logo2 {
+    position: absolute;
+    left: 50%;
+    /* Sentrer horisontalt */
+    transform: translateX(-50%);
+    z-index: 50;
+    /* Hold dette lavere enn knapper og splash-tekst */
+}
+
+.logo1 {
+    top: 82px;
+}
+
+.logo2 {
+    top: 190px;
+}
+
+.element {
+    user-select: none;
+    pointer-events: none;
+}
+
+.text-color {
+    color: #383838;
+    text-shadow: none;
+    font-size: 30px;
+}

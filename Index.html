@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>The Legacy Edition Hub</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .legacylogo-image {
+            position: absolute;
+            top: -50px;
+            left: 630px;
+        }
+    </style>
+    <script>
+        function redirectToBrowserHomepage() {
+            const userAgent = navigator.userAgent;
+
+            let homepage;
+
+            // skjekk for Internet Explorer
+            if (userAgent.includes('MSIE') || userAgent.includes('Trident')) {
+                homepage = 'https://www.bing.com/';
+            }
+            // skjekk for Edge
+            else if (userAgent.includes('Edg')) {
+                homepage = 'https://www.bing.com/';
+            }
+            // for alle andre nettlesere
+            else {
+                homepage = 'https://google.com/';
+            }
+
+            // bytt til hjemsiden
+            window.location.href = homepage;
+        }
+
+
+
+    </script>
+    <!-- Include polyfills for IE -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Element.prototype.classList,Element.prototype.closest,Element.prototype.matches,NodeList.prototype.forEach"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <p id="result"></p>
+    <div class="background"></div>
+    <div class="background background2"></div>
+    <div class="logo-container">
+        <!-- dette er bildene  som er logoene -->
+        <img src="images/minecraft_title.png" class="logo1" style="height: 125px;">
+        <img src="images/Legacy_Edition.png" class="logo2" style="height: 30px;">
+    </div>
+
+    <audio id="buttonClick" src="sounds/buttonpressed.mp3"></audio>
+    <div class="button-container">
+        <div id="splashText" class="splash-text"></div>
+
+        <!-- Hoved meny knapper -->
+        <a href="Play_Game.html" onclick="handleClick(event, 'Play_Game.html')" class="custom-button">Play Game</a>
+        <a href="Mini_Games.html" onclick="handleClick(event, 'Mini_Games.html')" class="custom-button">Mini Games</a>
+        <a href="Leaderboards.html" onclick="handleClick(event, 'Leaderboards.html')"
+            class="custom-button">Leaderboards</a>
+        <a href="achievements.html" onclick="handleClick(event, 'achievements.html')"
+            class="custom-button">Achievements</a>
+        <a href="Help_Options.html" onclick="handleClick(event, 'Help_Options.html')" class="custom-button">Help &
+            Options</a>
+        <a href="Minecraft_Store.html" onclick="handleClick(event, 'Minecraft_Store.html')"
+            class="custom-button">Minecraft Store</a>
+
+        <a href="javascript:void(0)" onclick="redirectToBrowserHomepage()" class="custom-button">Exit Game</a>
+
+
+
+</body>
+
+</html>
